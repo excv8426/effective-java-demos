@@ -4,9 +4,7 @@ public final class Message {
 	private String sender;
 	private String receiver;
 	private String content;
-	
-	
-	
+		
 	public String getSender() {
 		return sender;
 	}
