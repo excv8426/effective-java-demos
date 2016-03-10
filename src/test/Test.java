@@ -1,6 +1,6 @@
 package test;
 
-import noinstance.Utility;
+import overridehashcode.Testhashcode;
 
 public class Test {
 
@@ -8,8 +8,8 @@ public class Test {
 		//Teststaticfactorymethod.newService1();
 		//Testbuilder.test();
 		//Testsingleton.test();
-		Utility.test();
-
+		//Utility.test();
+		Testhashcode.test();
 	}
 
 }
