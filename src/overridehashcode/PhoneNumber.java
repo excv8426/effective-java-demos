@@ -22,7 +22,11 @@ public class PhoneNumber {
 	
 	@Override
 	public int hashCode(){
-		return 42;
+		int result=17;
+		result=result*31+this.areaCode;
+		result=result*31+this.lineNumber;
+		System.out.println("hashcode:"+result);
+		return result;
 	}
 	
 	@Override

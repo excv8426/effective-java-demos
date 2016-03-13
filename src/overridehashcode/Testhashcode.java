@@ -6,6 +6,7 @@ import java.util.Map;
 public class Testhashcode {
 
 	public static void test(){
+		
 		PhoneNumber p1=new PhoneNumber(0335, 123456);
 		PhoneNumber p2=new PhoneNumber(0335, 1234567);
 		PhoneNumber p3=new PhoneNumber(0335, 123456);
