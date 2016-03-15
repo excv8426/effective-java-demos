@@ -42,4 +42,13 @@ public class PhoneNumber {
 			}
 		}
 	}
+	
+	@Override
+	public String toString(){
+		StringBuilder result=new StringBuilder();
+		result.append(this.areaCode);
+		result.append('-');
+		result.append(this.lineNumber);
+		return result.toString();
+	}
 }

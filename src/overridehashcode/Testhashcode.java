@@ -18,6 +18,6 @@ public class Testhashcode {
 		System.out.println(map.get(p1));
 		System.out.println(map.get(p2));
 		System.out.println(map.get(p3));
-		System.out.println(map.get(new PhoneNumber(0335, 123456)));
+		System.out.println(p1);
 	}
 }
