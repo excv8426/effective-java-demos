@@ -1,6 +1,6 @@
 package test;
 
-import overridehashcode.Testhashcode;
+import cloneable.Testclone;
 
 public class Test {
 
@@ -9,7 +9,8 @@ public class Test {
 		//Testbuilder.test();
 		//Testsingleton.test();
 		//Utility.test();
-		Testhashcode.test();
+		//Testhashcode.test();
+		Testclone.test();
 	}
 
 }
