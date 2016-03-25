@@ -1,6 +1,6 @@
 package overridehashcode;
 
-public class PhoneNumber {
+public class PhoneNumber implements Comparable<PhoneNumber> {
 	private int areaCode;
 	private int lineNumber;
 	public PhoneNumber(int areaCode,int lineNumber){
@@ -50,5 +50,15 @@ public class PhoneNumber {
 		result.append('-');
 		result.append(this.lineNumber);
 		return result.toString();
+	}
+	@Override
+	public int compareTo(PhoneNumber o) {
+		if (this.areaCode!=o.areaCode) {
+			return this.areaCode-o.areaCode;
+		} else if (this.lineNumber!=o.lineNumber) {
+			return this.lineNumber-o.lineNumber;
+		}else {
+			return 0;
+		}
 	}
 }
