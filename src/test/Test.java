@@ -1,8 +1,6 @@
 package test;
 
-import java.util.TreeSet;
-
-import cloneable.Testclone;
+import extending.Testextending;
 
 public class Test {
 
@@ -12,7 +10,8 @@ public class Test {
 		//Testsingleton.test();
 		//Utility.test();
 		//Testhashcode.test();
-		Testclone.test();
+		//Testclone.test();
+		Testextending.test();
 	}
 
 }
