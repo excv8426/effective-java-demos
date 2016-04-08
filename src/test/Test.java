@@ -1,6 +1,7 @@
 package test;
 
 import extending.Testextending;
+import generic.TestGeneric;
 
 public class Test {
 
@@ -11,7 +12,8 @@ public class Test {
 		//Utility.test();
 		//Testhashcode.test();
 		//Testclone.test();
-		Testextending.test();
+		//Testextending.test();
+		TestGeneric.testreduce();
 	}
 
 }
