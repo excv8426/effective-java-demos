@@ -1,6 +1,5 @@
 package test;
 
-import extending.Testextending;
 import generic.TestGeneric;
 
 public class Test {
@@ -13,7 +12,8 @@ public class Test {
 		//Testhashcode.test();
 		//Testclone.test();
 		//Testextending.test();
-		TestGeneric.testreduce();
+		//TestGeneric.testreduce();
+		TestGeneric.testmax();
 	}
 
 }

@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import overridehashcode.PhoneNumber;
+
 public class TestGeneric {
 	public static int setContain(Set<?> s1,Set<?> s2){
 		int r=0;
@@ -40,5 +42,26 @@ public class TestGeneric {
 		}
 		String ss=reduce(list, new StringJoin(), "##");
 		System.out.println(ss);
+	}
+	
+	public static <T extends Comparable<T>> T max(List<T> list){
+		Iterator<T> iterator=list.iterator();
+		T r=list.get(0);
+		while (iterator.hasNext()) {
+			T t = iterator.next();
+			if (r.compareTo(t)<0) {
+				r=t;
+			}
+		}
+		return r;
+	}
+	
+	public static void testmax(){
+		List<PhoneNumber> list=new ArrayList<>();
+		list.add(new PhoneNumber(335, 6010867));
+		list.add(new PhoneNumber(311, 6010863));
+		list.add(new PhoneNumber(336, 6010866));
+		list.add(new PhoneNumber(336, 6010864));
+		System.out.println(max(list));
 	}
 }
