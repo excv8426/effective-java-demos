@@ -64,4 +64,21 @@ public class TestGeneric {
 		list.add(new PhoneNumber(336, 6010864));
 		System.out.println(max(list));
 	}
+	
+	public static void testStack(){
+		Stack<Number> stack=new Stack<>();
+		stack.push(1);
+		stack.push(1.5);
+		stack.push(new Long("1666666"));
+		List<Long> pushlist=new ArrayList<>();
+		pushlist.add(new Long("266666666666"));
+		pushlist.add(new Long("366666666666"));
+		pushlist.add(new Long("466666666666"));
+		stack.pushAll(pushlist);
+		List<Number> poplist=new ArrayList<>();
+		stack.popAll(poplist);
+		for (int i = 0; i < poplist.size(); i++) {
+			System.out.println(poplist.get(i));
+		}
+	}
 }
