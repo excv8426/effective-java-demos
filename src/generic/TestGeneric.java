@@ -1,6 +1,7 @@
 package generic;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -79,6 +80,29 @@ public class TestGeneric {
 		stack.popAll(poplist);
 		for (int i = 0; i < poplist.size(); i++) {
 			System.out.println(poplist.get(i));
+		}
+	}
+	
+	public static <E> Set<E> union(Set<? extends E> s1,Set<? extends E> s2){
+		Set<E> r=new HashSet<>();
+		r.addAll(s1);
+		r.addAll(s2);
+		return r;
+	}
+	
+	public static void testUnion(){
+		Set<Integer> integers=new HashSet<>();
+		integers.add(1);
+		integers.add(2);
+		Set<Float> floats=new HashSet<>();
+		floats.add((float) 1.5);
+		floats.add((float) 2.5);
+		Set<Number> numbers=new HashSet<>();
+		numbers=TestGeneric.<Number>union(integers, floats);
+		Iterator<Number> iterator=numbers.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+			
 		}
 	}
 }

@@ -14,7 +14,8 @@ public class Test {
 		//Testextending.test();
 		//TestGeneric.testreduce();
 		//TestGeneric.testmax();
-		TestGeneric.testStack();
+		//TestGeneric.testStack();
+		TestGeneric.testUnion();
 	}
 
 }
