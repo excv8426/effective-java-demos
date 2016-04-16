@@ -45,12 +45,16 @@ public class TestGeneric {
 		System.out.println(ss);
 	}
 	
-	public static <T extends Comparable<T>> T max(List<T> list){
-		Iterator<T> iterator=list.iterator();
-		T r=list.get(0);
+	/**
+	 *1 T实现了Comparable接口
+	 *2 T的父类实现了Comparable接口
+	 * */
+	public static <T extends Comparable<? super T>> T max(List<? extends T> list){
+		Iterator<? extends T> iterator=list.iterator();
+		T r=iterator.next();
 		while (iterator.hasNext()) {
 			T t = iterator.next();
-			if (r.compareTo(t)<0) {
+			if (t.compareTo(r)>0) {
 				r=t;
 			}
 		}
