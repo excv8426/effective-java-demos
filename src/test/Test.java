@@ -1,6 +1,6 @@
 package test;
 
-import generic.TestGeneric;
+import enums.Testenums;
 
 public class Test {
 
@@ -16,7 +16,8 @@ public class Test {
 		//TestGeneric.testmax();
 		//TestGeneric.testStack();
 		//TestGeneric.testUnion();
-		TestGeneric.testSwap();
+		//TestGeneric.testSwap();
+		Testenums.testPlanet();
 	}
 
 }
