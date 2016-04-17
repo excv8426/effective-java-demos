@@ -109,4 +109,27 @@ public class TestGeneric {
 			
 		}
 	}
+	
+	public static void swap(List<?> list,int i,int j){
+		swapHelper(list,i,j);
+	}
+	
+	public static <E> void swapHelper(List<E> list,int i,int j){
+		E e=list.get(i);
+		list.set(i, list.get(j));
+		list.set(j, e);
+	}
+	
+	public static void testSwap(){
+		List<Number> numbers=new ArrayList<>();
+		numbers.add(1);
+		numbers.add(1.5);
+		for (int i = 0; i < numbers.size(); i++) {
+			System.out.println(numbers.get(i));
+		}
+		swap(numbers, 0, 1);
+		for (int i = 0; i < numbers.size(); i++) {
+			System.out.println(numbers.get(i));
+		}
+	}
 }

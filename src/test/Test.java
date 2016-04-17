@@ -13,9 +13,10 @@ public class Test {
 		//Testclone.test();
 		//Testextending.test();
 		//TestGeneric.testreduce();
-		TestGeneric.testmax();
+		//TestGeneric.testmax();
 		//TestGeneric.testStack();
 		//TestGeneric.testUnion();
+		TestGeneric.testSwap();
 	}
 
 }
