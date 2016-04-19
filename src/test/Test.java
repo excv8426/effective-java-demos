@@ -17,7 +17,8 @@ public class Test {
 		//TestGeneric.testStack();
 		//TestGeneric.testUnion();
 		//TestGeneric.testSwap();
-		Testenums.testPlanet();
+		//Testenums.testPlanet();
+		Testenums.testOperation();
 	}
 
 }

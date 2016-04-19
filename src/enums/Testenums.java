@@ -14,4 +14,10 @@ public class Testenums {
 		System.out.println(Planet.EARTH.surfaceWeigth(1));
 		System.out.println(Planet.EARTH.toString());
 	}
+	
+	public static void testOperation(){
+		for (int i = 0; i < Operation.values().length; i++) {
+			System.out.println(Operation.values()[i].apply(2, 4));
+		}
+	}
 }
