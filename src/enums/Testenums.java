@@ -20,4 +20,11 @@ public class Testenums {
 			System.out.println(Operation.values()[i].apply(2, 4));
 		}
 	}
+	
+	public static void testPay(){
+		for (int i = 0; i < PayrollDay.values().length; i++) {
+			System.out.println(PayrollDay.values()[i].name());
+			System.out.println(PayrollDay.values()[i].pay(9, 10));
+		}
+	}
 }
