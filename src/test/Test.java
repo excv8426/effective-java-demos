@@ -19,7 +19,8 @@ public class Test {
 		//TestGeneric.testSwap();
 		//Testenums.testPlanet();
 		//Testenums.testOperation();
-		Testenums.testPay();
+		//Testenums.testPay();
+		Testenums.testEnumSet();
 	}
 
 }

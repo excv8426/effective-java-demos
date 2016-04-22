@@ -1,5 +1,10 @@
 package enums;
 
+import java.util.EnumSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
 public class Testenums {
 	public static void testPlanet(){
 		Planet.values();
@@ -26,5 +31,18 @@ public class Testenums {
 			System.out.println(PayrollDay.values()[i].name());
 			System.out.println(PayrollDay.values()[i].pay(9, 10));
 		}
+	}
+	
+	public static void testEnumSet(){
+		Set<PayrollDay> enumSet=EnumSet.of(PayrollDay.FRIDAY,PayrollDay.MONDAY);
+		Iterator<PayrollDay> iterator=enumSet.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+			
+		}
+	}
+	
+	public static void testEnumMap(){
+
 	}
 }
