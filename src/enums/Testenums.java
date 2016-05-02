@@ -1,9 +1,13 @@
 package enums;
 
+import java.util.EnumMap;
 import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+
+import enums.Herb.Type;
 
 public class Testenums {
 	public static void testPlanet(){
@@ -43,6 +47,20 @@ public class Testenums {
 	}
 	
 	public static void testEnumMap(){
-
+		Herb[] garden=new Herb[3];
+		garden[0]=new Herb("one", Type.ANNUAL);
+		garden[1]=new Herb("one", Type.BIENNIAL);
+		garden[2]=new Herb("one", Type.PERENNIAL);
+		Map<Herb.Type, Set<Herb>> herbs=new EnumMap<>(Herb.Type.class);
+		
+		for (int i = 0; i < Herb.Type.values().length; i++) {
+			herbs.put(Herb.Type.values()[i], new HashSet<Herb>());
+		}
+		
+		for (int i = 0; i < garden.length; i++) {
+			herbs.get(garden[i].type).add(garden[i]);
+		}
+		
+		System.out.println(herbs);
 	}
 }

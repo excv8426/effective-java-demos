@@ -20,7 +20,8 @@ public class Test {
 		//Testenums.testPlanet();
 		//Testenums.testOperation();
 		//Testenums.testPay();
-		Testenums.testEnumSet();
+		//Testenums.testEnumSet();
+		Testenums.testEnumMap();
 	}
 
 }
