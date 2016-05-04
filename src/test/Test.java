@@ -1,5 +1,6 @@
 package test;
 
+import enums.Phase;
 import enums.Testenums;
 
 public class Test {
@@ -21,7 +22,11 @@ public class Test {
 		//Testenums.testOperation();
 		//Testenums.testPay();
 		//Testenums.testEnumSet();
-		Testenums.testEnumMap();
+		//Testenums.testEnumMap();
+		System.out.println(Phase.Transition.from(Phase.GAS, Phase.GAS));
+		System.out.println(Phase.Transition.from(Phase.GAS, Phase.LIQUID));
+		System.out.println(Phase.Transition.from(Phase.GAS, Phase.SOLID));
+		System.out.println(Phase.Transition.from(Phase.SOLID, Phase.GAS));
 	}
 
 }
