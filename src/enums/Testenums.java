@@ -63,4 +63,11 @@ public class Testenums {
 		
 		System.out.println(herbs);
 	}
+	
+	public static void testphase(){
+		System.out.println(Phase.Transition.from(Phase.GAS, Phase.GAS));
+		System.out.println(Phase.Transition.from(Phase.GAS, Phase.LIQUID));
+		System.out.println(Phase.Transition.from(Phase.GAS, Phase.SOLID));
+		System.out.println(Phase.Transition.from(Phase.SOLID, Phase.GAS));
+	}
 }

@@ -1,6 +1,7 @@
 package test;
 
-import annotations.TestAnnotation;
+import enums.Testenums;
+import immutable.TestImmutable;
 
 public class Test {
 
@@ -22,11 +23,9 @@ public class Test {
 		//Testenums.testPay();
 		//Testenums.testEnumSet();
 		//Testenums.testEnumMap();
-		/*System.out.println(Phase.Transition.from(Phase.GAS, Phase.GAS));
-		System.out.println(Phase.Transition.from(Phase.GAS, Phase.LIQUID));
-		System.out.println(Phase.Transition.from(Phase.GAS, Phase.SOLID));
-		System.out.println(Phase.Transition.from(Phase.SOLID, Phase.GAS));*/
-		TestAnnotation.test();
+		//Testenums.testphase();
+		//TestAnnotation.test();
+		TestImmutable.testInteger();
 	}
 
 }

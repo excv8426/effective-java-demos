@@ -1,27 +1,22 @@
 package immutable;
 
+import java.util.Date;
+
 public final class Complex {
-	private final double re;
-	private final double im;
+	private final int i;
+	private final Integer integer;
+	private final String s;
+	private final Date date;
 	
-	public Complex(double re,double im){
-		this.re=re;
-		this.im=im;
-	}
-
-	public double getRe() {
-		return re;
-	}
-
-	public double getIm() {
-		return im;
+	public Complex(int i,Integer integer,String s,Date date){
+		this.i=i;
+		this.integer=integer;
+		this.s=s;
+		this.date=new Date(date.getTime());
 	}
 	
-	public Complex add(Complex c){
-		return new Complex(this.re+c.re, this.im+c.im);
-	}
-	
-	public Complex subtract(Complex c){
-		return new Complex(this.re-c.re, this.im-c.im);
+	@Override
+	public String toString(){
+		return String.valueOf(this.i)+String.valueOf(this.integer)+this.s+date.toString();
 	}
 }
