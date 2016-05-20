@@ -1,7 +1,6 @@
 package test;
 
-import enums.Testenums;
-import immutable.TestImmutable;
+import overload.TestOverload;
 
 public class Test {
 
@@ -25,7 +24,8 @@ public class Test {
 		//Testenums.testEnumMap();
 		//Testenums.testphase();
 		//TestAnnotation.test();
-		TestImmutable.testInteger();
+		//TestImmutable.testInteger();
+		TestOverload.testboxing();
 	}
 
 }
