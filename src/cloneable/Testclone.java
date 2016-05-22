@@ -1,15 +1,12 @@
 package cloneable;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Arrays;
 import java.util.List;
 
 public class Testclone {
 	public static void test(){
-		List<String> keywords=new ArrayList<>();
-		keywords.add("key1");
-		keywords.add("key2");
-		keywords.add("key3");
+		List<String> keywords=new ArrayList<>(Arrays.asList("key1","key2","key3"));
 		Paper paper=new Paper();
 		paper.setTitle("title1");
 		paper.setAuthor("author1");
@@ -19,19 +16,15 @@ public class Testclone {
 		
 		System.out.println(paper2.getAuthor());
 		System.out.println(paper2.getTitle());
-		Iterator<String> iterator=paper2.getKeywords().iterator();
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
-		}
+
+		System.out.println(paper2.getKeywords());
 		paper.setTitle("title2");
 		paper.setAuthor("author2");
 		keywords.add("key4");
 		System.out.println("********************************");
 		System.out.println(paper2.getAuthor());
 		System.out.println(paper2.getTitle());
-		iterator=paper2.getKeywords().iterator();
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
-		}
+
+		System.out.println(paper2.getKeywords());
 	}
 }

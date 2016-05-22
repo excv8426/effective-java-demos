@@ -1,7 +1,13 @@
 package test;
 
+import cloneable.Testclone;
 import overload.TestOverload;
+import reflection.TestReflect;
 
+/**
+ * @author Yuki
+ *
+ */
 public class Test {
 
 	public static void main(String[] args) {
@@ -25,7 +31,8 @@ public class Test {
 		//Testenums.testphase();
 		//TestAnnotation.test();
 		//TestImmutable.testInteger();
-		TestOverload.testboxing();
+		//TestOverload.testboxing();
+		TestReflect.test();
 	}
 
 }
