@@ -1,6 +1,7 @@
 package test;
 
 import cloneable.Testclone;
+import concurrency.StopThread;
 import overload.TestOverload;
 import reflection.TestReflect;
 
@@ -32,7 +33,8 @@ public class Test {
 		//TestAnnotation.test();
 		//TestImmutable.testInteger();
 		//TestOverload.testboxing();
-		TestReflect.test();
+		//TestReflect.test();
+		StopThread.Test();
 	}
 
 }
