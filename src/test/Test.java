@@ -1,9 +1,6 @@
 package test;
 
-import cloneable.Testclone;
-import concurrency.StopThread;
-import overload.TestOverload;
-import reflection.TestReflect;
+import concurrency.TestConcurrency;
 
 /**
  * @author Yuki
@@ -34,7 +31,8 @@ public class Test {
 		//TestImmutable.testInteger();
 		//TestOverload.testboxing();
 		//TestReflect.test();
-		StopThread.Test();
+		//StopThread.Test();
+		TestConcurrency.testObserver();
 	}
 
 }

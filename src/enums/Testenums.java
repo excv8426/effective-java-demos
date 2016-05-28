@@ -34,6 +34,8 @@ public class Testenums {
 		for (int i = 0; i < PayrollDay.values().length; i++) {
 			System.out.println(PayrollDay.values()[i].name());
 			System.out.println(PayrollDay.values()[i].pay(9, 10));
+			System.out.println(PayrollDay.FRIDAY.pay(9, 10));
+			System.out.println(PayrollDay.SATURDAY.pay(9, 10));
 		}
 	}
 	
