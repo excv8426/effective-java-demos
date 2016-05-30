@@ -32,7 +32,8 @@ public class Test {
 		//TestOverload.testboxing();
 		//TestReflect.test();
 		//StopThread.Test();
-		TestConcurrency.testObserver();
+		//TestConcurrency.testObserver();
+		TestConcurrency.testExcutor();
 	}
 
 }
