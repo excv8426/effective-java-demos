@@ -33,7 +33,8 @@ public class Test {
 		//TestReflect.test();
 		//StopThread.Test();
 		//TestConcurrency.testObserver();
-		TestConcurrency.testExcutor();
+		//TestConcurrency.testExcutor();
+		TestConcurrency.testWatch();
 	}
 
 }

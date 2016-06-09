@@ -35,4 +35,11 @@ public class TestConcurrency {
 		poolexecutor.execute(new Runs());
 		poolexecutor.shutdown();
 	}
+	
+	public static void testWatch(){
+		ExecutorService executorService=Executors.newFixedThreadPool(10);
+		long time=ExcutorWatch.time(executorService, 10, new Runs());
+		executorService.shutdown();
+		System.out.println(time/1000);
+	}
 }
