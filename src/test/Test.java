@@ -34,7 +34,8 @@ public class Test {
 		//StopThread.Test();
 		//TestConcurrency.testObserver();
 		//TestConcurrency.testExcutor();
-		TestConcurrency.testWatch();
+		//TestConcurrency.testWatch();
+		TestConcurrency.testList();
 	}
 
 }
