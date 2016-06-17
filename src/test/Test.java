@@ -1,6 +1,7 @@
 package test;
 
 import concurrency.TestConcurrency;
+import serialization.TestSerialization;
 
 /**
  * @author Yuki
@@ -35,7 +36,8 @@ public class Test {
 		//TestConcurrency.testObserver();
 		//TestConcurrency.testExcutor();
 		//TestConcurrency.testWatch();
-		TestConcurrency.testList();
+		//TestConcurrency.testList();
+		TestSerialization.testSerializableMessage();
 	}
 
 }
