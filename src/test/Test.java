@@ -1,6 +1,6 @@
 package test;
 
-import concurrency.TestConcurrency;
+import extending.Testextending;
 import serialization.TestSerialization;
 
 /**

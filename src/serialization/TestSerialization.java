@@ -10,6 +10,7 @@ import java.io.ObjectOutputStream;
 public class TestSerialization {
 	
 	public static void testSerializableMessage() {
+		Foo foo1=new Foo(7, 11);
 		SerializableMessage m1=new SerializableMessage();
 		m1.setSender("ss");
 		m1.setReceiver("rr");
@@ -21,6 +22,7 @@ public class TestSerialization {
 			outputStream=new FileOutputStream("message.data");
 			objectOutputStream=new ObjectOutputStream(outputStream);
 			objectOutputStream.writeObject(m1);
+			objectOutputStream.writeObject(foo1);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -43,10 +45,12 @@ public class TestSerialization {
 		FileInputStream inputStream=null;
 		ObjectInputStream objectInputStream=null;
 		SerializableMessage m2=null;
+		Foo foo2=null;
 		try {
 			inputStream=new FileInputStream("message.data");
 			objectInputStream=new ObjectInputStream(inputStream);
 			m2=(SerializableMessage) objectInputStream.readObject();
+			foo2=(Foo) objectInputStream.readObject();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -68,6 +72,6 @@ public class TestSerialization {
 		}
 		
 		System.out.println(m2);
-		
+		System.out.println(foo2);
 	}
 }
