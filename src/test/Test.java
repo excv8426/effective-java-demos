@@ -1,6 +1,5 @@
 package test;
 
-import extending.Testextending;
 import serialization.TestSerialization;
 
 /**
@@ -37,7 +36,8 @@ public class Test {
 		//TestConcurrency.testExcutor();
 		//TestConcurrency.testWatch();
 		//TestConcurrency.testList();
-		TestSerialization.testSerializableMessage();
+		//TestSerialization.testSerializableMessage();
+		TestSerialization.testSerializableSingleton();
 	}
 
 }

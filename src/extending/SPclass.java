@@ -4,6 +4,7 @@ public class SPclass {
 	
 	public SPclass(){
 		System.out.println("super constructor called.");
+		this.m1();
 	}
 	
 	public void m1(){

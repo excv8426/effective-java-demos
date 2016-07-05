@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+import singleton.SingleMessage;
+
 public class TestSerialization {
 	
 	public static void testSerializableMessage() {
@@ -15,12 +17,9 @@ public class TestSerialization {
 		m1.setSender("ss");
 		m1.setReceiver("rr");
 		m1.setContent("cc");
-		
-		FileOutputStream outputStream=null;
-		ObjectOutputStream objectOutputStream=null;
-		try {
-			outputStream=new FileOutputStream("message.data");
-			objectOutputStream=new ObjectOutputStream(outputStream);
+
+		try(FileOutputStream outputStream=new FileOutputStream("message.data");
+			ObjectOutputStream objectOutputStream=new ObjectOutputStream(outputStream);) {
 			objectOutputStream.writeObject(m1);
 			objectOutputStream.writeObject(foo1);
 		} catch (FileNotFoundException e) {
@@ -29,26 +28,12 @@ public class TestSerialization {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-			try {
-				objectOutputStream.flush();
-				objectOutputStream.close();
-				outputStream.flush();
-				outputStream.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
 		}
 		
-		FileInputStream inputStream=null;
-		ObjectInputStream objectInputStream=null;
 		SerializableMessage m2=null;
 		Foo foo2=null;
-		try {
-			inputStream=new FileInputStream("message.data");
-			objectInputStream=new ObjectInputStream(inputStream);
+		try(FileInputStream inputStream=new FileInputStream("message.data");
+			ObjectInputStream objectInputStream=new ObjectInputStream(inputStream);) {
 			m2=(SerializableMessage) objectInputStream.readObject();
 			foo2=(Foo) objectInputStream.readObject();
 		} catch (FileNotFoundException e) {
@@ -60,18 +45,44 @@ public class TestSerialization {
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-			try {
-				objectInputStream.close();
-				inputStream.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
 		}
 		
 		System.out.println(m2);
 		System.out.println(foo2);
+	}
+	
+	public static void testSerializableSingleton() {
+		SingleMessage message1=SingleMessage.INSTANCE;
+		message1.setContent("message1");
+
+		try(FileOutputStream outputStream=new FileOutputStream("message.data");
+			ObjectOutputStream objectOutputStream=new ObjectOutputStream(outputStream);) {
+			objectOutputStream.writeObject(message1);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		SingleMessage message2=null;
+		try(FileInputStream inputStream=new FileInputStream("message.data");
+			ObjectInputStream objectInputStream=new ObjectInputStream(inputStream);) {
+			message2=(SingleMessage) objectInputStream.readObject();
+			message2.setContent("message2");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("message1:"+message1.getContent());
+		System.out.println("message2:"+message2.getContent());
 	}
 }

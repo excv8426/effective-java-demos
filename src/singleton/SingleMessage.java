@@ -2,6 +2,10 @@ package singleton;
 
 public enum SingleMessage {
 	INSTANCE;
+	
+	private SingleMessage(){
+		System.out.println("SingleMessage init");
+	}
 	private String sender;
 	private String receiver;
 	private String content;
