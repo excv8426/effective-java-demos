@@ -37,7 +37,8 @@ public class Test {
 		//TestConcurrency.testWatch();
 		//TestConcurrency.testList();
 		//TestSerialization.testSerializableMessage();
-		TestSerialization.testSerializableSingleton();
+		//TestSerialization.testSerializableSingleton();
+		TestSerialization.testSerializableProxy();
 	}
 
 }

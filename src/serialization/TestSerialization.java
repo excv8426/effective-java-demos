@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.Date;
 
 import singleton.SingleMessage;
 
@@ -84,5 +85,38 @@ public class TestSerialization {
 		
 		System.out.println("message1:"+message1.getContent());
 		System.out.println("message2:"+message2.getContent());
+	}
+	
+	public static void testSerializableProxy() {
+		Period period=new Period(new Date(0), new Date());
+
+		try(FileOutputStream outputStream=new FileOutputStream("message.data");
+			ObjectOutputStream objectOutputStream=new ObjectOutputStream(outputStream);) {
+			objectOutputStream.writeObject(period);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Period readperiod=null;
+		try(FileInputStream inputStream=new FileInputStream("message.data");
+			ObjectInputStream objectInputStream=new ObjectInputStream(inputStream);) {
+			readperiod=(Period) objectInputStream.readObject();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("start:"+readperiod.getStart());
+		System.out.println("end:"+readperiod.getEnd());
 	}
 }
