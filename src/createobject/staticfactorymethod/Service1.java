@@ -1,4 +1,4 @@
-package staticfactorymethod;
+package createobject.staticfactorymethod;
 
 public class Service1 implements Service {
 	public Service1(){

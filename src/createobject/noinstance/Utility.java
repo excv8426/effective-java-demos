@@ -1,4 +1,4 @@
-package noinstance;
+package createobject.noinstance;
 
 public class Utility {
 	private Utility(){

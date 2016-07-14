@@ -1,4 +1,4 @@
-package staticfactorymethod;
+package createobject.staticfactorymethod;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

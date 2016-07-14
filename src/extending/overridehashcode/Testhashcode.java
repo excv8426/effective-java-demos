@@ -1,4 +1,4 @@
-package overridehashcode;
+package extending.overridehashcode;
 
 import java.util.HashMap;
 import java.util.Map;

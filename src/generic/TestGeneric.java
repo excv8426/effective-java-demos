@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-import overridehashcode.PhoneNumber;
+import extending.overridehashcode.PhoneNumber;
 
 public class TestGeneric {
 	public static int setContain(Set<?> s1,Set<?> s2){

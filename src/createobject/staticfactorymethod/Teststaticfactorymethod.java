@@ -1,4 +1,4 @@
-package staticfactorymethod;
+package createobject.staticfactorymethod;
 
 public class Teststaticfactorymethod {
 	public static void newService1(){

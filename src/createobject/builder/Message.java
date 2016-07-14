@@ -1,4 +1,4 @@
-package builder;
+package createobject.builder;
 
 public final class Message {
 	private String sender;

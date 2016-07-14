@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-import composition.ForwardingSet;
+import extending.composition.ForwardingSet;
 
 public class ObservableSet<E> extends ForwardingSet<E> {
 

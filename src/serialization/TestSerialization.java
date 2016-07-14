@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Date;
 
-import singleton.SingleMessage;
+import createobject.singleton.SingleMessage;
 
 public class TestSerialization {
 	

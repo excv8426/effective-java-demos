@@ -1,4 +1,4 @@
-package singleton;
+package createobject.singleton;
 
 public class Testsingleton {
 	public static void test(){

@@ -1,4 +1,4 @@
-package staticfactorymethod;
+package createobject.staticfactorymethod;
 
 public class Provider1 implements Provider {
 

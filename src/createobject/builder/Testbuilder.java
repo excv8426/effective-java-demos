@@ -1,6 +1,6 @@
-package builder;
+package createobject.builder;
 
-import builder.Message.Builder;
+import createobject.builder.Message.Builder;
 
 public class Testbuilder {
 	public static void test(){

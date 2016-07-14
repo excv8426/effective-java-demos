@@ -1,4 +1,4 @@
-package overridehashcode;
+package extending.overridehashcode;
 
 public class PhoneNumber implements Comparable<PhoneNumber> {
 	private int areaCode;

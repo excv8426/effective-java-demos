@@ -1,4 +1,4 @@
-package singleton;
+package createobject.singleton;
 
 public enum SingleMessage {
 	INSTANCE;
