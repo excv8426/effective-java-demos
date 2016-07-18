@@ -39,8 +39,8 @@ public class Test {
 		//TestSerialization.testSerializableMessage();
 		//TestSerialization.testSerializableSingleton();
 		//TestSerialization.testSerializableProxy();
-		
-		System.out.println(subStringcounter("asdweffgabhfs","asw"));
+		//System.out.println(subStringcounter("asdweffgabhfs","asw"));
+		TestObserver.testObserver();
 	}
 	
 	public static int subStringcounter(String full,String sub){
