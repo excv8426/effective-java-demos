@@ -1,6 +1,7 @@
 package test;
 
 import serialization.TestSerialization;
+import test.observer.TestObserver;
 
 /**
  * @author Yuki
