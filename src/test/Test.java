@@ -1,8 +1,5 @@
 package test;
 
-import serialization.TestSerialization;
-import test.observer.TestObserver;
-
 /**
  * @author Yuki
  *
@@ -41,7 +38,9 @@ public class Test {
 		//TestSerialization.testSerializableSingleton();
 		//TestSerialization.testSerializableProxy();
 		//System.out.println(subStringcounter("asdweffgabhfs","asw"));
-		TestObserver.testObserver();
+		//TestObserver.testObserver();
+		float[] repayment={1000,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f};
+		creditcardDiscount(0.10f,repayment);
 	}
 	
 	public static int subStringcounter(String full,String sub){
@@ -67,6 +66,20 @@ public class Test {
 			return count;
 		}
 		
+	}
+	
+	
+	public static void creditcardDiscount(float rate,float[] repayment){
+		float sum=0;
+		for (int i = 1; i <= repayment.length; i++) {
+			if (i==1) {
+				sum=(repayment[i-1])/(1+(rate/12)*i);
+			} else {
+				sum=sum+repayment[i-1]/(1+(rate/12)*i);
+			}
+		}
+		
+		System.out.println(sum);
 	}
 
 }
