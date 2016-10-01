@@ -40,7 +40,12 @@ public class Test {
 		//System.out.println(subStringcounter("asdweffgabhfs","asw"));
 		//TestObserver.testObserver();
 		float[] repayment={1000,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f,543.2f};
-		creditcardDiscount(0.10f,repayment);
+		float[] repayment2={1000,793.2f,793.2f,793.2f,793.2f,793.2f,793.2f,793.2f,793.2f,793.2f,793.2f,793.2f,793.2f};
+		float[] repayment3={1000,1550.4f,1550.4f,1550.4f,1550.4f,1550.4f,1550.4f};
+		float[] repayment4={1000,3054,3054,3054};
+		creditcardDiscount(0.091f,repayment2);
+		creditcardDiscount(0.088f,repayment3);
+		creditcardDiscount(0.069f,repayment4);
 	}
 	
 	public static int subStringcounter(String full,String sub){
@@ -72,11 +77,12 @@ public class Test {
 	public static void creditcardDiscount(float rate,float[] repayment){
 		float sum=0;
 		for (int i = 1; i <= repayment.length; i++) {
-			if (i==1) {
+			/*if (i==1) {
 				sum=(repayment[i-1])/(1+(rate/12)*i);
 			} else {
-				sum=sum+repayment[i-1]/(1+(rate/12)*i);
-			}
+				
+			}*/
+			sum=sum+repayment[i-1]/(1+(rate/12)*i);
 		}
 		
 		System.out.println(sum);
